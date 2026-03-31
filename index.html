@@ -7,9 +7,99 @@
     <title>495 Final Project</title>
 </head>
 <body>
+    <nav>
+        <ul>
+            <li><strong>Home</strong></li>
+            <!-- add some more like future developments and the Mock Scenarios  -->
+        </ul>
+       
+         <!-- add a nav for the home page to to jump to diff sections? maybe unnecessary -->
+          <!-- TO DO THIS: Add id ="" to headers then do <ol> and list -->
+             <!-- e.g  <ol> <li> <a href=""> </a> </li> </ol>
+                       <h id=""> </h> -->
+
+    </nav>
+      <!-- TO link to certain section in <p> use <a href=""> </a> -->
     <main>
-        <h1>Hello World!</h1>
+        <!-- Introduce User to Site h: Name of Site, B: what is site for breif intro or more in-depth?? -->
+        <h1 id = "Intro" >Visual Aid Prototype Site</h1>
+        <p> Hello, welcome to our proto-site for making lectures more accessible to those with vision impairments. 
+        </p>
+        <p> 
+            With this site you can upload your lecture to the site and our VLM will join you in watching and assist in 
+            helping identify and understand what images, graphs, charts and other visual aids are present in the lecture 
+            and what they mean in the context of the lecture.
+        </p>
+        <p> 
+            At the moment this site is not actaully capable of generating descriptions, but serves as an idea of what this 
+            "product" can look like with more development. We have created a more streamlined version of what the site can 
+            possibly look like and have created multiple mock scenarios to demonstrate our vision for what this site can possibly be.
+        </p>
+        <p>
+           Different example how this site will be able to be used are linked below.
+        </p>
+        <div id = "mock scenario list">
+            <ul>
+                <li> this is and example of ... [insert link]</li>
+            </ul>
+        </div>
+        <h2 id = "Tutorial"> How to Use this Site </h2>
+        <p> 
+            Here is a helpful guide on how to use this site.
+        </p>
+        
+        <h3 id = "Uploading" > Uploading your lecture </h3>
+        <p> 
+             To upload your lecture, there is an input box, that asks for a URL link.
+             Simply post the link to you live talk in the "Add link" and press enter or click Submit, to have the aid be able
+             to access the lecture. <a href="#URL"> Click here to input your link now</a>. 
+             (possibly change if we want the user to upload a video file instead of a zoom link 
+             or even have permisson to allow site to access your screen and microphone) 
+        </p>
+        <p> Note: Under construction, does not actually do anything</p>
+
+        <h3 id = "Generation" > Generating and Speaking Descripton </h3>
+        <p> 
+            After connecting to lecture (live or recorded), the aid will generate descriptions as it detects them. 
+            The most recent description will be labeled as "Current Description" and will be updated as more descriptions are generated.
+            Once a new description is generated the old one will be added to a transcript of descriptions that can be refered back to. 
+            To have the current description read press [KEY] to have it be read to you. </p>
+        <p> Note: Under construction, does not actually do anything </p>
+
+          <!-- URL input from user Text: Please, insert link to your lecture!  
+        \\Should we allow more than url like file input from user as well -->
+        <h2 id="URL" > Add Link </h2>
+        <form>
+            <fieldset>
+                <legend>Lecture submission</legend>
+                <div id="lecture-help"> Please insert a link to your lecture.  </div>
+                <label for="lecture-url"> Lecture link </label>
+                <input 
+                    type="url" 
+                    id="lecture-url" 
+                    name="lecture-url" 
+                    aria-describedby="lecture-help"
+                    required  
+                >
+            </fieldset>
+            <button type="submit">Submit lecture</button> 
+        </form>
+
+
+        <!-- Descripton stuff(TBD) -->
+            <!-- Current Description -->
+            <!-- Description Transcript -->
+
+        <!-- Settings -->
+
+
+        
+
+
     </main>
+
+
+
 
     <script src="js/main.js"></script>
 </body>
