@@ -8,16 +8,17 @@
 </head>
 <body>
     <main>
-        <ul>
-            <li>
-                <a href="index.html"><strong>Home</strong></a>
-            </li>
-        </ul>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html"><strong>Home</strong></a>
+                </li>
+            </ul>
+        </nav>
         
         <h1>Descriptions Page</h1>
         <p> 
-            Explanation of how this page works... <br><br>
-            {In console call updateDescription() function to add new description}
+            Explanation of how this page works...
         </p>
 
         <div id="description-container">
@@ -25,9 +26,21 @@
                 <p>Waiting on new description...</p>
             </div>
         </div>
+        <button type="submit" onclick="onClick()">New Description</button> 
         <button type="submit">Play Description Audio (not implemented)</button> 
     </main>
 
+    <script>
+        const descriptions = ["00:00:00 - description 1", "00:00:00 - description 2", "00:00:00 - description 3", "00:00:00 - description 4"]; 
+        // we can update this descriptions array to contain the specific descriptions for each scenario
+        let curr = 0
+        function onClick() {
+            if (curr < descriptions.length) {
+                updateDescription(descriptions[curr]);
+                curr++;
+            }
+        }
+    </script>
     <audio id="alert" src="audio/ding.mp3"></audio>
     <script src="js/main.js"></script>
 </body>
