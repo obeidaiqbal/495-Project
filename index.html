@@ -30,16 +30,10 @@
                 <a href="descriptions.html"><strong>Scenario 5</strong></a>
             </li>
         </ul>
-       
-         <!-- add a nav for the home page to to jump to diff sections? maybe unnecessary -->
-          <!-- TO DO THIS: Add id ="" to headers then do <ol> and list -->
-             <!-- e.g  <ol> <li> <a href=""> </a> </li> </ol>
-                       <h id=""> </h> -->
-
     </nav>
-      <!-- TO link to certain section in <p> use <a href=""> </a> -->
+
     <main>
-        <!-- Introduce User to Site h: Name of Site, B: what is site for breif intro or more in-depth?? -->
+        <!-- Introduce User to Site -->
         <h1 id = "Intro" >Visual Aid Prototype Site</h1>
         <p> Hello, welcome to our proto-site for making lectures more accessible to those with vision impairments. 
         </p>
@@ -53,44 +47,86 @@
             "product" can look like with more development. We have created a more streamlined version of what the site can 
             possibly look like and have created multiple mock scenarios to demonstrate our vision for what this site can possibly be.
         </p>
-        <p>
-           Different example how this site will be able to be used are linked below.
-        </p>
-        <div id = "mock scenario list">
-            <ul>
-                <li> 
-                    this is and example of a  
-                    <a href="descriptions.html">description page</a>
-                </li>
-            </ul>
-        </div>
+        
         <h2 id = "Tutorial"> How to Use this Site </h2>
         <p> 
             Here is a helpful guide on how to use this site.
         </p>
         
-        <h3 id = "Uploading" > Uploading your lecture </h3>
-        <p> 
+        <details> 
+            <summary id = "how-to-upload-link" >  Uploading your lecture </summary>
+             <p> 
              To upload your lecture, there is an input box, that asks for a URL link.
-             Simply post the link to you live talk in the "Add link" and press enter or click Submit, to have the aid be able
-             to access the lecture. <a href="#URL"> Click here to input your link now</a>. 
-             (possibly change if we want the user to upload a video file instead of a zoom link 
-             or even have permisson to allow site to access your screen and microphone) 
+             Simply post the link to you live talk in the URL input box labeled "Lecture link", 
+             and press enter or click the button "Submit lecture and contuine", to have the aid be able
+             to access the lecture.
+             After submitting lecutre you will be redirected to the description page, where the aid will be 
+             providing descriptions on visual information as it is detected.
+            </p>
+        </details>
+        <details>
+            <summary id = "how-descriptions-works"> Generating and Speaking Descripton </summary>
+            <p> 
+            After connecting to lecture (live or recorded), the aid will generate descriptions as it detects them 
+            playing a "Ding" audio cue for each new generated description. 
+            The most recent description can be read by clicking the "Play Audio Description" button.
+            The description block will be updated as more descriptions are generated.
+            The user will be able to go back and have previous description be read out loud by clicking the "Previous Description" and
+            "Next Description" buttons. 
+            For demonstation purposes we have also added a "New Description" button to force genrate a new description.
+            </p>
+        </details>
+       
+        <details>
+            <summary id ="how-mock-scenarios-work"> How to use simulated examples</summary>
+            <p>
+                Included in this prototype to help demonstrate our hopes for this webiste are mock scenarios that showcase: how 
+                the site will notify a user of descriptions and what the content of the descriptions will be. 
+            </p>
+            <p>
+                Each scenario will have an audio recorindg of a fake short presenation that describes 
+                figures and images not shown or described. When the sepaker indicates that an visual is being described, 
+                an audio cue will play and a description will be played. Due to the generation not being implamented we have hard coded the cues
+                and descriptions. 
+                <a href="#mock-scenario-list"> To try out the simulated examples yourself!</a>
+            </p>
+        </details>
+        
+        <p> <strong>Note:</strong>  Many features are not operational, as this site is just a prototype </p>
+        
+
+        <h2 id = "mock-scenarios"> Mock Scenarios</h2>
+        <p>
+           Different example how this site will be able to be used are linked below.
         </p>
-        <p> Note: Under construction, does not actually do anything</p>
+        <div id = "mock-scenario-list">
+            <ul>
+                <li>
+                    <a href="descriptions.html"><strong>Scenario 1: e.g describing a line graoh</strong></a>
+                </li>
+                <li>
+                    <a href="descriptions.html"><strong>Scenario 2: add more detail</strong></a>
+                </li>
+                <li>
+                    <a href="descriptions.html"><strong>Scenario 3: add more detail</strong></a>
+                </li>
+                <li>
+                    <a href="descriptions.html"><strong>Scenario 4: add more detail</strong></a>
+                </li>
+                <li>
+                    <a href="descriptions.html"><strong>Scenario 5: add more detail</strong></a>
+                </li>
+                <li> 
+                    this is a blank example of a  
+                    <a href="descriptions.html">description page</a>
+                </li>
+            </ul>
+        </div>
 
-        <h3 id = "Generation" > Generating and Speaking Descripton </h3>
-        <p> 
-            After connecting to lecture (live or recorded), the aid will generate descriptions as it detects them. 
-            The most recent description will be labeled as "Current Description" and will be updated as more descriptions are generated.
-            Once a new description is generated the old one will be added to a transcript of descriptions that can be refered back to. 
-            To have the current description read press [KEY] to have it be read to you. </p>
-        <p> Note: Under construction, does not actually do anything </p>
-
-          <!-- URL input from user Text: Please, insert link to your lecture!  
-        \\Should we allow more than url like file input from user as well -->
-        <h2 id="URL" > Add Link </h2>
-        <form>
+          <!-- Does not need link pressing submit just redericts to description page -->
+        <h2 id="URL-for-lecture" > Upload Lecture </h2>
+            <p>  Adding a link does nothing, but pressing the submit button will rediect you to the descripitons page.  <a href= "#how-to-upload-link"> Learn more about how uploading your link will work. </a> </p>
+        <form id = "lecture-link-form" action = "descriptions.html">
             <fieldset>
                 <legend>Lecture submission</legend>
                 <div id="lecture-help"> Please insert a link to your lecture.  </div>
@@ -100,18 +136,11 @@
                     id="lecture-url" 
                     name="lecture-url" 
                     aria-describedby="lecture-help"
-                    required  
                 >
             </fieldset>
-            <button type="submit">Submit lecture</button> 
+            <button type="submit">Submit lecture and contuine</button> 
         </form>
 
-
-        <!-- Descripton stuff(TBD) -->
-            <!-- Current Description -->
-            <!-- Description Transcript -->
-
-        <!-- Settings -->
     </main>
 
     <script src="js/main.js"></script>

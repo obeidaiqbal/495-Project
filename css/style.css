@@ -11,3 +11,28 @@
 #description p {
   margin: 15px;
 }
+
+
+details {
+    margin-bottom: 1rem;
+  }
+
+summary {
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0.75rem 1rem;
+   
+    
+    cursor: pointer;
+    /* list-style: none; /* removes default triangle in some browsers */
+  }
+
+  nav ul {
+    display: flex;
+    list-style: none;   /* removes bullets */
+    padding: 0;
+    margin: 0;
+    gap: 1rem;          /* space between items */
+  }
+
+
