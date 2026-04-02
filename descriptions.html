@@ -27,8 +27,11 @@
             </div>
         </div>
         <button type="submit" onclick="onClick()">New Description</button> 
-        <button type="submit">Play Description Audio (not implemented)</button> 
+        <button type="submit" onclick= "playDescription()"> Play Description Audio </button> 
+        <button type="submit" onclick= "rewind()"> Previous Description </button> 
+        <button type="submit" onclick= "forward()"> Next Description </button> 
     </main>
+    
 
     <script>
         const descriptions = ["00:00:00 - description 1", "00:00:00 - description 2", "00:00:00 - description 3", "00:00:00 - description 4"]; 
