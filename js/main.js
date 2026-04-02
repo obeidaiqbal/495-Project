@@ -10,7 +10,7 @@ function updateDescription(newDescription) {
     const prev = document.createElement("p");
     prev.id = "desc-" + descriptionCount;
     descriptionCount++;
-    currentDescription = descriptionCount;
+    currentDescription = descriptionCount -1 ;
 
     prev.textContent = newDescription;
     description.appendChild(prev);
@@ -21,17 +21,22 @@ function updateDescription(newDescription) {
 //add buttons for playDescription, rewind, forward in the scenario thingy
 
 function playDescription() {
-    const description = document.getElementById("desc-"+currentDescription); 
+    const description = document.getElementById("desc-"+currentDescription).textContent; 
     const sound = new SpeechSynthesisUtterance(description);
+    sound.rate = 1.75;
     window.speechSynthesis.speak(sound);
 }
 
 function rewind() {
-    currentDescription = currentDescription - 1;
-    playDescription();
+    if(currentDescription > 0){
+        currentDescription = currentDescription - 1;
+        playDescription();
+    }
 }
 
 function forward() {
-    currentDescription = currentDescription + 1;
-    playDescription();
+    if(currentDescription < descriptionCount - 1){
+        currentDescription = currentDescription + 1;
+        playDescription();
+    }
 }
