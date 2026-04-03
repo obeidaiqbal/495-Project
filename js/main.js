@@ -8,7 +8,8 @@ let currentDescription = 0
 const scenarioTimestamps = {
     "attention" : [5, 22, 37, 70, 75, 80, 87],
     "virtue" : [15, 20, 23, 45, 50, 67],
-    "line_graph" : [6, 40, 45 ],
+    "line_graph" : [6, 40, 45],
+    "pie_chart" : [0, 0, 0, 0],
 }
 const scenarioDescriptions = {
     "attention" : ["Caption: Figure 1: The Transformer Model Architecture. Depicts a vertical neural network architecture with an input section on the left and an output section on the right.",
@@ -27,6 +28,10 @@ const scenarioDescriptions = {
     "line_graph" : ["Line Graph. X-axis: 'word position withis sentence'; Y-axis: 'Mean RT in ms'",
                     "Mean of about 520 milliseconds",
                     "Positions 2 to 14 are all around 375 milliseconds, 15 rises to 425 milliseconds"],
+    "pie_chart" : ['Slide contains a pie chart called “Global Greenhouse Gas Emissions by Gas"',
+                    "Carbon Dioxide (fossil fuel and industrial processes) 65%",
+                    "Carbon Dioxide (forestry and other land use) 11%",
+                    "Over 3 quarters"],
 }
 
 function updateDescription(newDescription) {
