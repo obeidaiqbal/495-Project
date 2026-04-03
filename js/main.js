@@ -8,6 +8,7 @@ let currentDescription = 0
 const scenarioTimestamps = {
     "attention" : [5, 22, 37, 70, 75, 80, 87],
     "virtue" : [15, 20, 23, 45, 50, 67],
+    "line_graph" : [6, 40, 45 ],
 }
 const scenarioDescriptions = {
     "attention" : ["Caption: Figure 1: The Transformer Model Architecture. Depicts a vertical neural network architecture with an input section on the left and an output section on the right.",
@@ -23,6 +24,9 @@ const scenarioDescriptions = {
             "writes Prudence in large letters",
             "circles Prudence and draws lines from it to the other virtues",
             "writes Temperance, draws a line from it to Prudence"],
+    "line_graph" : ["Line Graph. X-axis: 'word position withis sentence'; Y-axis: 'Mean RT in ms'",
+                    "Mean of about 520 milliseconds",
+                    "Positions 2 to 14 are all around 375 milliseconds, 15 rises to 425 milliseconds"],
 }
 
 function updateDescription(newDescription) {
