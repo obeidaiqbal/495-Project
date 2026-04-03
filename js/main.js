@@ -54,12 +54,13 @@ const scenarioData = {
         ]
     },
     "piechart" : {
-        audioSrc: "",
+        audioSrc: "audio/global-emissions.m4a",
         title: "Scenario 2: Climate Change Lecture",
-        timestamps: [],
-        descriptions: [
-
-        ]
+        timestamps: [2, 11, 15, 24],
+        descriptions: ['Slide contains a pie chart called “Global Greenhouse Gas Emissions by Gas"',
+                    "Carbon Dioxide (fossil fuel and industrial processes) 65%",
+                    "Carbon Dioxide (forestry and other land use) 11%",
+                    "Over 3 quarters"]
     }
 }
 
