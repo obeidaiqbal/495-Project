@@ -9,7 +9,7 @@ const scenarioTimestamps = {
     "attention" : [5, 22, 37, 70, 75, 80, 87],
     "virtue" : [15, 20, 23, 45, 50, 67],
     "line_graph" : [6, 40, 45],
-    "pie_chart" : [0, 0, 0, 0],
+    "pie_chart" : [2, 11, 15, 24],
 }
 const scenarioDescriptions = {
     "attention" : ["Caption: Figure 1: The Transformer Model Architecture. Depicts a vertical neural network architecture with an input section on the left and an output section on the right.",
