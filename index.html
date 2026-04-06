@@ -7,7 +7,7 @@
     <title>495 Final Project</title>
 </head>
 <body>
-    <nav>
+    <nav id = "nav">
         <ul>
             <li>
                 <a href="index.html"><strong>Home</strong></a>
@@ -15,19 +15,19 @@
              <!-- links need to be updated for each scenario with their specific html files, right now they 
               point to the basic descriptions example page  -->
              <li>
-                <a href="descriptions.html"><strong>Scenario 1</strong></a>
+                <a href="descriptions.html?scenario=line_graph"><strong>Scenario 1</strong></a>
             </li>
             <li>
-                <a href="descriptions.html"><strong>Scenario 2</strong></a>
+                <a href="descriptions.html?"><strong>Scenario 2</strong></a>
             </li>
             <li>
-                <a href="descriptions.html"><strong>Scenario 3</strong></a>
+                <a href="descriptions.html?scenario=hopfield"><strong>Scenario 3</strong></a>
             </li>
             <li>
-                <a href="descriptions.html"><strong>Scenario 4</strong></a>
+                <a href="descriptions.html?scenario=attention"><strong>Scenario 4</strong></a>
             </li>
             <li>
-                <a href="descriptions.html"><strong>Scenario 5</strong></a>
+                <a href="descriptions.html?scenario=virtue"><strong>Scenario 5</strong></a>
             </li>
         </ul>
     </nav>
@@ -35,45 +35,37 @@
     <main>
         <!-- Introduce User to Site -->
         <h1 id = "Intro" >Visual Aid Prototype Site</h1>
-        <p> Hello, welcome to our proto-site for making lectures more accessible to those with vision impairments. 
+        <p> Hello, welcome to our prototype website for making lectures more accessible to those with vision impairments. 
         </p>
         <p> 
-            With this site you can upload your lecture to the site and our VLM will join you in watching and assist in 
-            helping identify and understand what images, graphs, charts and other visual aids are present in the lecture 
-            and what they mean in the context of the lecture.
-        </p>
-        <p> 
-            At the moment this site is not actaully capable of generating descriptions, but serves as an idea of what this 
-            "product" can look like with more development. We have created a more streamlined version of what the site can 
-            possibly look like and have created multiple mock scenarios to demonstrate our vision for what this site can possibly be.
+            With this site you can upload your lecture to the site and our agent will join you in watching and identify what images, graphs, charts and other visual aids are present in the lecture,
+            what they mean in the context of the lecture, and generate descriptions live to communicate this to you.
         </p>
         
-        <h2 id = "Tutorial"> How to Use this Site </h2>
-        <p> 
-            Here is a helpful guide on how to use this site.
-        </p>
+        <h2 id = "Tutorial"> How to Use This Site </h2>
         
         <details> 
             <summary id = "how-to-upload-link" >  Uploading your lecture </summary>
              <p> 
              To upload your lecture, there is an input box, that asks for a URL link.
-             Simply post the link to you live talk in the URL input box labeled "Lecture link", 
+             Simply post the link to your live talk in the URL input box labeled "Lecture link", 
              and press enter or click the button "Submit lecture and contuine", to have the aid be able
              to access the lecture.
-             After submitting lecutre you will be redirected to the description page, where the aid will be 
-             providing descriptions on visual information as it is detected.
+             After submitting you will be redirected to the description page, where the tool will 
+             provide descriptions on visual information as it is detected.
+
+             (NOTE: As this is a prototype, this is not fully functional yet and will only work for the links listed under Mock Scenarios)
             </p>
         </details>
         <details>
             <summary id = "how-descriptions-works"> Generating and Speaking Descripton </summary>
             <p> 
-            After connecting to lecture (live or recorded), the aid will generate descriptions as it detects them 
-            playing a "Ding" audio cue for each new generated description. 
+            After connecting to lecture, the aid will generate descriptions as it detects they are necessary,
+            playing a "Ding" audio cue for each new generated description.
             The most recent description can be read by clicking the "Play Audio Description" button.
             The description block will be updated as more descriptions are generated.
             The user will be able to go back and have previous description be read out loud by clicking the "Previous Description" and
             "Next Description" buttons. 
-            For demonstation purposes we have also added a "New Description" button to force genrate a new description.
             </p>
         </details>
        
@@ -84,11 +76,11 @@
                 the site will notify a user of descriptions and what the content of the descriptions will be. 
             </p>
             <p>
-                Each scenario will have an audio recorindg of a fake short presenation that describes 
-                figures and images not shown or described. When the sepaker indicates that an visual is being described, 
-                an audio cue will play and a description will be played. Due to the generation not being implamented we have hard coded the cues
-                and descriptions. 
-                <a href="#mock-scenario-list"> To try out the simulated examples yourself!</a>
+                Each scenario will have an audio recording of a short presentation that describes 
+                figures and images not shown or described. When the speaker indicates that a visual is being described, 
+                an audio cue will play and a description will be played. 
+                <a href="#mock-scenario-list"> To try out the simulated examples yourself copy one of the listed links into the URL input box!</a> 
+                
             </p>
         </details>
         
@@ -97,49 +89,52 @@
 
         <h2 id = "mock-scenarios"> Mock Scenarios</h2>
         <p>
-           Different example how this site will be able to be used are linked below.
+           5 examples excerpts from talks with visual aids are listed. Please explore these scenarios to hear how the tool works! 
+           <a href = "#lecture-url" >Just copy the link into the input box</a> 
+           OR <a href ="#nav">  go to the navigation bar to access the scenario pages.</a>
+
         </p>
+
         <div id = "mock-scenario-list">
             <ul>
                 <li>
-                    <a href="descriptions.html"><strong>Scenario 1: e.g describing a line graoh</strong></a>
+                    <p> <strong>Scenario: Linguistics Presentation, </strong> Link: <code>descriptions.html?scenario=line_graph</code><br> </p>
                 </li>
                 <li>
-                    <a href="descriptions.html"><strong>Scenario 2: add more detail</strong></a>
+                    <p> <strong>Scenario: Climate Change Lecture, </strong> Link: <code>descriptions.html?scenario=piechart</code><br> </p>
                 </li>
                 <li>
-                    <a href="descriptions.html"><strong>Scenario 3: add more detail</strong></a>
+                    <p> <strong>Scenario: Machine Learning 1, </strong> Link: <code>descriptions.html?scenario=hopfield</code><br> </p>
                 </li>
                 <li>
-                    <a href="descriptions.html"><strong>Scenario 4: add more detail</strong></a>
+                    <p> <strong>Scenario: Machine Learning 2, </strong> Link: <code>descriptions.html?scenario=attention</code><br> </p>
                 </li>
                 <li>
-                    <a href="descriptions.html"><strong>Scenario 5: add more detail</strong></a>
-                </li>
-                <li> 
-                    this is a blank example of a  
-                    <a href="descriptions.html">description page</a>
+                    <p> <strong>Scenario: Philosophy Class Whiteboard Lecture </strong>, Link: <code>descriptions.html?scenario=virtue</code><br> </p>
                 </li>
             </ul>
         </div>
+    
 
-          <!-- Does not need link pressing submit just redericts to description page -->
-        <h2 id="URL-for-lecture" > Upload Lecture </h2>
-            <p>  Adding a link does nothing, but pressing the submit button will rediect you to the descripitons page.  <a href= "#how-to-upload-link"> Learn more about how uploading your link will work. </a> </p>
-        <form id = "lecture-link-form" action = "descriptions.html">
+         <h2 id="URL-for-lecture" > Upload Lecture </h2>
+            <p> Paste a link to your lecture to be redirected to the description's page.<a href= "#how-to-upload-link"> Learn more about how uploading your link will work. </a></p>
+        <form id = "lecture-link-form" >
             <fieldset>
                 <legend>Lecture submission</legend>
-                <div id="lecture-help"> Please insert a link to your lecture.  </div>
+                <div id="lecture-help"> <a href = "#mock-scenario-list"> Please copy and input a link from the given list </a>   </div>
                 <label for="lecture-url"> Lecture link </label>
                 <input 
-                    type="url" 
+                    type="text" 
                     id="lecture-url" 
                     name="lecture-url" 
                     aria-describedby="lecture-help"
+                    required  
                 >
             </fieldset>
-            <button type="submit">Submit lecture and contuine</button> 
+            <button type="submit">Submit given lecture URL and contuine</button>
         </form>
+
+
 
     </main>
 
